@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app='test'>
+<head>
+    <title>InsureSign Coding Assessment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body ng-controller="itemController">
+  <aside class="items">
+<h1>list of items</h1>
+<ul>
+  <li class=singleItem ng-repeat='item in allItems'>
+<h3>Id: {{item.id}}</h3>
+<h4>Name: {{item.name}}</h4>
+<h4>Sender: {{item.sender}}</h4>
+<button ng-click="showInfo(item.id,item.name,item.sender,item.status,item.message)" type="button" name="button">More Info</button>
+  </li>
+</ul>
+  </aside>
+  <section class="itemInfo">
+<h1>more info about items</h1>
+<h2>{{moreId}}</h2>
+<h3>{{moreName}}</h3>
+<h4>{{moreSender}}</h4>
+<h4>{{moreStatus}}</h4>
+<h4>{{moreMessage}}</h4>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
